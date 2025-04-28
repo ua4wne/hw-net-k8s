@@ -21,7 +21,7 @@
 
 3. Разместить поды в namespace App.
 
-![deploy](./task1/deploy.yml)
+![deploy](./task1/deploy.png)
 
 4. Создать политики, чтобы обеспечить доступ frontend -> backend -> cache. Другие виды подключений должны быть запрещены.
 
