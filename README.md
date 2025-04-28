@@ -12,7 +12,7 @@
 
 ## Задание 1. Создать сетевую политику или несколько политик для обеспечения доступа
 
-1. Создать deployment'ы приложений frontend, backend и cache и соответсвующие сервисы.
+1. Создать deployment'ы приложений frontend, backend и cache и соответствующие сервисы.
 2. В качестве образа использовать network-multitool.
 
 > [frontend.yml](./front.yml) [backend.yml](./backend.yml) [cache.yml](./cache.yml)
@@ -33,10 +33,10 @@
 
 ![allow_all](./task1/allow_all.png)
 
->Применим правило, которое запрешает любой трафик между подами
+>Применим правило, которое запрещает любой трафик между подами
 
 ![deny_all](./task1/deny_all.png)
 
->Теперь применим политики разрешающие только трафик от frontend к backend и от backend к cache. Другие виды трафика запрещены.
+>Теперь применим политики, разрешающие только трафик от frontend к backend и от backend к cache. Другие виды трафика запрещены.
 
 ![check](./task1/check.png)
