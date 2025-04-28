@@ -15,16 +15,17 @@
 1. Создать deployment'ы приложений frontend, backend и cache и соответсвующие сервисы.
 2. В качестве образа использовать network-multitool.
 
-> [frontend](./front.yml) [backend](./backend.yml) [cache](./cache.yml)
-> [svc-front](./svc-front.yml) [svc-backend](./svc-back.yml) [svc-cache.yml](./svc-cache.yml)
+> [frontend.yml](./front.yml) [backend.yml](./backend.yml) [cache.yml](./cache.yml)
+
+> [svc-front.yml](./svc-front.yml) [svc-backend.yml](./svc-back.yml) [svc-cache.yml](./svc-cache.yml)
 
 3. Разместить поды в namespace App.
 
-![deploy](./tsak1/deploy.yml)
+![deploy](./task1/deploy.yml)
 
 4. Создать политики, чтобы обеспечить доступ frontend -> backend -> cache. Другие виды подключений должны быть запрещены.
 
-[deny-all.yml](./deny-all.yml)
+>[deny-all.yml](./deny-all.yml) [net-policy-front.yml](./net-policy-front.yml) [net-policy-backend.yml](./net-policy-backend.yml) [net-policy-cache.yml](./net-policy-cache.yml)
 
 5. Продемонстрировать, что трафик разрешён и запрещён.
 
@@ -34,4 +35,8 @@
 
 >Применим правило, которое запрешает любой трафик между подами
 
-![deny_all](./task1/deny_all.yml)
+![deny_all](./task1/deny_all.png)
+
+>Теперь применим политики разрешающие только трафик от frontend к backend и от backend к cache. Другие виды трафика запрещены.
+
+![check](./task1/check.png)
